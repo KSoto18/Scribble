@@ -9,3 +9,17 @@ const PORT = 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+
+
+
+
+
+
+
+
+
+// PORT Listener
+app.listen(PORT, () =>
+  console.log(` ☄️ Listening to: http://localhost:${PORT}`)
+);
