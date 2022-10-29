@@ -1,5 +1,4 @@
 const express = require('express');
-
 const app = express();
 
 // PORT
@@ -10,8 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-
-
+// GET ROUTE for index.js (homepage)
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 
 
