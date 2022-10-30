@@ -8,10 +8,13 @@ module.export = function (app){
      res.json(dataBase);
    });
 
-   //Post to notes & add to Database
-
+   //Post notes and add to Database
+   app.post('/api/notes', function (req, res) {
+     dataBase.push(req.body);
+   });
 
    //Write new note into Database
+   
 }
 
 
