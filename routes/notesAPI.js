@@ -2,7 +2,7 @@
 const fs = require('fs');
 const dataBase = require('../db/db.json');
 
-module.export = function (app){
+module.export = function (app) {
    // GET Database
    app.get('/api/notes', function (req, res) {
      res.json(dataBase);
@@ -14,7 +14,7 @@ module.export = function (app){
    });
 
    //Write new note into Database
-   
-}
-
-
+   fs.writeFile('../db/db.json', JSON.stringify(dataBase), function () {
+    res.json(dataBase);
+   });
+};
