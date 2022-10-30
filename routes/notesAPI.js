@@ -11,11 +11,16 @@ module.exports = function (app) {
     //Post notes and add to Database
     app.post('/api/notes', function (req, res) {
         dataBase.push(req.body);
-
+       
+        // updates the ID for each note
+        forEach((note, i) => {
+            note.id = i + 2;
+          });
 
         //Write new note into Database
         fs.writeFile('../db/db.json', JSON.stringify(dataBase), function () {
             res.json(dataBase);
+            console.log(dataBase);
         });
     });
 }
