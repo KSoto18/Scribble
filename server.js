@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Express ROUTES to API and HTML
-require('./routes/pageRoutes')(app);
+require('./routes/pageRoutes.js')(app);
+require('./routes/notesAPI.js')(app);
 
 // PORT Listener
 app.listen(PORT, () =>
