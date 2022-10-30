@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Express ROUTES
+// Express ROUTES to API and HTML
+require('./routes/pageRoutes')(app);
 
 // PORT Listener
 app.listen(PORT, () =>
