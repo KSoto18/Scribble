@@ -21,6 +21,10 @@ module.exports = function (app) {
         fs.writeFile('../db/db.json', JSON.stringify(dataBase), function () {
             res.json(dataBase);
             console.log(dataBase);
+
         });
     });
 }
+
+
+// NEED A DELETE NOTE FUNCTION
