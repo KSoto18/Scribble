@@ -8,15 +8,14 @@ module.exports = function (app) {
         fs.readFile('../db/db.json', 'utf-8', function () {
             console.info(`Looking for notes...`);
             res.json(dataBase);
-        }
-        )
+        });
     });
 
     //Post notes and add to Database
     app.post('/api/notes', function (req, res) {
         dataBase.push(req.body);
 
-        // updates the ID for each note
+        // Updates the ID for each note
         dataBase.forEach((note, i) => {
             note.id = i + 1;
         });
@@ -30,10 +29,18 @@ module.exports = function (app) {
         });
 
      
-        app.delete('/api/notes/:id', function (req, res) {
-           
+         //Delete Notes Function
+         app.delete('/api/notes/:id', function (req, res) {
+            
+
+            fs.writeFile('../db/db.json', JSON.stringify(dataBase), function () {
+                console.info(`A Note was deleted!`);
+                res.json(dataBase);
+
+
             });
 
         });
-    }
+    });
+}
 
