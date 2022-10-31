@@ -32,10 +32,12 @@ If you followed these steps, the application should be ready to go!
 ## Usage on browser
 
 To use the application do the following:
- 1. Visit: http://localhost:3001.
+ 1. Visit: [Scribble: Note Taker](https://creepy-mummy-24163.herokuapp.com/notes).
  2. Press 'Get Started'
  3. Add a new note by typing a new TITLE and a NOTE TEXT.
  4. Press the save icon in the right-top corner.
+ 5. To view a note click on the title of the desired note.
+ 6. To delete a note, press on the trashcan next to the desired note.
 
 
 <br>
@@ -51,9 +53,9 @@ To use the application do the following:
 
  ## Links
 
-  - Repository
+  - [Repository](https://github.com/KSoto18/Scribble)
 
-  - Deployed Website
+  - [Deployed Website](https://creepy-mummy-24163.herokuapp.com/notes)
 
  ## Sources
   
